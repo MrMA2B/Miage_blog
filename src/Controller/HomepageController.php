@@ -24,4 +24,12 @@ class HomepageController extends AbstractController
     {
         return new Response(content: 'Contact Page');
     }
+
+    /**
+     * @Route("/hello/{firstname}/{lastname}")
+     */
+    public function hello(string $firstname, string $lastname): Response
+    {
+        return new Response (sprintf('Coucou %s %s', $firstname, $lastname));
+    }
 }
