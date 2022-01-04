@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomepageController extends AbstractController
@@ -12,6 +14,14 @@ class HomepageController extends AbstractController
      */
     public function home()
     {
-        echo 'toto';
+        return new Response(content: 'Homepage Page !');
+    }
+
+    /**
+     * @Route("/contact")
+     */
+    public function contact(): Response
+    {
+        return new Response(content: 'Contact Page');
     }
 }
