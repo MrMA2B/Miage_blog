@@ -26,7 +26,7 @@ class HomepageController extends AbstractController
     }
 
     /**
-     * @Route("/hello/{firstname}/{lastname}")
+     * @Route("/hello/{firstname<[A-Z a-z]+>}/{lastname<[A-Z a-z]+>}")
      */
     public function hello(string $firstname, string $lastname): Response
     {
