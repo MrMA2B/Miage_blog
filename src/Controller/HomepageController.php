@@ -30,6 +30,6 @@ class HomepageController extends AbstractController
      */
     public function hello(string $firstname, string $lastname): Response
     {
-        return new Response (sprintf('Coucou %s %s', $firstname, $lastname));
+        return new Response (sprintf('Connected as %s %s', $firstname, $lastname));
     }
 }
